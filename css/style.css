@@ -575,3 +575,138 @@ footer {
         opacity: 1;
     }
 }
+
+/* Experience & Education Section */
+.experience-education-wrapper {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+    margin-top: 3rem;
+}
+
+.experience-section,
+.education-section {
+    background: var(--card-bg);
+    backdrop-filter: blur(5px);
+    border: 1px solid rgba(43,122,255,0.3);
+    border-radius: 28px;
+    padding: 1.8rem;
+}
+
+.experience-section h3,
+.education-section h3 {
+    font-size: 1.6rem;
+    margin-bottom: 1.5rem;
+    color: var(--accent-cyan);
+    display: flex;
+    align-items: center;
+    gap: 0.8rem;
+    border-bottom: 2px solid rgba(43,122,255,0.3);
+    padding-bottom: 0.8rem;
+}
+
+.experience-section h3 i,
+.education-section h3 i {
+    font-size: 1.5rem;
+}
+
+/* Timeline style */
+.timeline {
+    position: relative;
+    padding-left: 1rem;
+}
+
+.timeline-item {
+    position: relative;
+    padding-left: 2rem;
+    padding-bottom: 1.8rem;
+    border-left: 2px solid var(--accent-blue);
+}
+
+.timeline-item:last-child {
+    padding-bottom: 0;
+}
+
+.timeline-item::before {
+    content: '';
+    position: absolute;
+    left: -8px;
+    top: 0;
+    width: 14px;
+    height: 14px;
+    border-radius: 50%;
+    background: var(--accent-cyan);
+    border: 2px solid var(--bg-primary);
+    box-shadow: 0 0 0 2px var(--accent-blue);
+}
+
+.timeline-date {
+    display: inline-block;
+    background: rgba(43,122,255,0.2);
+    padding: 0.2rem 0.8rem;
+    border-radius: 20px;
+    font-size: 0.75rem;
+    font-weight: 600;
+    color: var(--accent-cyan);
+    margin-bottom: 0.5rem;
+}
+
+.timeline-content h4 {
+    font-size: 1.1rem;
+    font-weight: 700;
+    color: white;
+    margin-bottom: 0.3rem;
+}
+
+.timeline-content h5 {
+    font-size: 0.9rem;
+    font-weight: 500;
+    color: var(--accent-cyan);
+    margin-bottom: 0.5rem;
+}
+
+.timeline-content p {
+    font-size: 0.85rem;
+    color: var(--text-dim);
+    line-height: 1.5;
+    margin-bottom: 0.5rem;
+}
+
+.timeline-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.4rem;
+    margin-top: 0.5rem;
+}
+
+.timeline-tags span {
+    background: rgba(0,212,255,0.1);
+    padding: 0.2rem 0.6rem;
+    border-radius: 12px;
+    font-size: 0.7rem;
+    font-family: monospace;
+    color: var(--accent-cyan);
+    border: 0.5px solid rgba(0,212,255,0.3);
+}
+
+/* Responsive untuk Experience & Education */
+@media (max-width: 968px) {
+    .experience-education-wrapper {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+    
+    .timeline {
+        padding-left: 0;
+    }
+}
+
+/* Hover effect for timeline items */
+.timeline-item:hover .timeline-content {
+    transform: translateX(4px);
+    transition: transform 0.2s ease;
+}
+
+.timeline-content {
+    transition: transform 0.2s ease;
+}
